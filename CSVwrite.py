@@ -1,9 +1,9 @@
 import csv
 
-with open('newCSV.csv', mode='w') as csv_file:
-    csv_writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+with open('employee_file.csv', mode='w') as employee_file:
+    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
-    csv_writer.writerow(['Name', 'Dept', 'Birth_month'])
-    csv_writer.writerow(['John Smith', 'Accounting', 'November'])
-    csv_writer.writerow(['Erica Meyers', 'IT', 'March'])
-    csv_writer.writerow(['Eric Edward', 'IT', 'April']
+    employee_writer.writerow(['Name', 'Dept', 'Birth_month'])
+    employee_writer.writerow(['John Smith', 'Accounting', 'November'])
+    employee_writer.writerow(['Erica Meyers', 'IT', 'March'])
+    employee_writer.writerow(['Eric Edward', 'IT', 'April']
