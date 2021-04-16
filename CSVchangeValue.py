@@ -18,7 +18,7 @@ print (val)
 reader = csv.reader(open('hrdata_modified.csv')) 
 lines = list(reader)
 
-lines[val][4] = '77-777-7777'
+lines[val][4] = str('77-777-7777')
 
 w = open('output.csv', 'w', newline='')
 writer = csv.writer(w)
