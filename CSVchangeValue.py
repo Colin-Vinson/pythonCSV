@@ -10,8 +10,7 @@ def find_index(input):
       #print (row)
       if row[0] == input: 
         return index 
-      else : index+=1
-    o.close()  
+      else : index+=1 
 val = find_index(user_input)
 print (val)
 
