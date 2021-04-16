@@ -1,6 +1,6 @@
 import csv
 
-with open('testCSV.csv') as csv_file:
+with open('hrdata.csv') as csv_file:
     # csv_reader = csv.reader(csv_file, delimiter=',', quotechar='"', skipinitialspace=True)
     csv_reader = csv.reader(csv_file, skipinitialspace=True)
     line_count = 0
