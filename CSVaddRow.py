@@ -1,6 +1,6 @@
 from csv import writer
   
-newEntry=['Ryan Curtis','2012-02-14',76000.0,15]
+newEntry=['Andrew Earlwood','2013-05-07',75000.0,12]
   
 with open('hrdata_modified.csv', 'a') as employee_file:
   
