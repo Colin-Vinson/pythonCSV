@@ -4,6 +4,7 @@ with open('testCSV.csv') as csv_file:
     # csv_reader = csv.reader(csv_file, delimiter=',', quotechar='"', skipinitialspace=True)
     csv_reader = csv.reader(csv_file, skipinitialspace=True)
     line_count = 0
+    
     for row in csv_reader:
         if line_count == 0:
             print(f'Column names are {", ".join(row)}')
