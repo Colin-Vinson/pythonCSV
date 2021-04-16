@@ -1,5 +1,5 @@
 import csv
-import pandas as pd
+import pandas
 
 user_input=input('Enter employee name: ')
 
@@ -18,15 +18,19 @@ print (val)
 reader = csv.reader(open('hrdata_modified.csv')) 
 lines = list(reader)
 
-lines[val][4] = '88-888-8888'
+lines[val][4] = '77-777-7777'
 
-writer = csv.writer(open('output.csv', 'w', newline=''))
+w = open('output.csv', 'w', newline='')
+writer = csv.writer(w)
 writer.writerows(lines)
+w.close()
 
-df = pd.read_csv('output.csv',
-    index_col='Employee',
-    parse_dates=['Hired'],
-    header=0, 
-    names=['Employee', 'Hired','Salary', 'Sick Days'])
+df = pandas.read_csv('output.csv')
 
-df.to_csv('hrdata_modified.csv')
+print(df)
+commit = input('Would you like to commit the changes? (Y/N)')
+if commit == 'Y' or 'y':
+    df.to_csv('hrdata_modified.csv')
+    print('Changes commited.')
+else:
+    print('Changes not commited.')
