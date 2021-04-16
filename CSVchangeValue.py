@@ -18,7 +18,7 @@ print (val)
 reader = csv.reader(open('hrdata_modified.csv')) 
 lines = list(reader)
 
-lines[val][4] = '44-444-4444'
+lines[val][4] = '55-555-5555'
 
 w = open('output.csv', 'w', newline='')
 writer = csv.writer(w)
@@ -32,7 +32,9 @@ df = pandas.read_csv('output.csv',
     names=['Employee', 'Hired','Salary', 'Sick Days', 'ID#'])
 
 print(df)
+
 commit = input('Would you like to commit the changes? (Y/N)')
+
 if commit == 'Y' or 'y':
     df.to_csv('hrdata_modified.csv', index=False)
     print('Changes commited.')
