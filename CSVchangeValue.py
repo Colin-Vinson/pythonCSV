@@ -18,29 +18,27 @@ print (val)
 reader = csv.reader(open('hrdata_modified.csv')) 
 lines = list(reader)
 
-if lines[val][1]== str(user_input):
-    lines[val][4] = '99-999-9999'
+  
 
+lines[val][4] = '99-999-9999'
 
-    w = open('output.csv', 'w', newline='')
-    writer = csv.writer(w)
-    writer.writerows(lines)
-    w.close()
+w = open('output.csv', 'w', newline='')
+writer = csv.writer(w)
+writer.writerows(lines)
+w.close()
 
-    df = pandas.read_csv('output.csv',
-        index_col='Employee',
-        parse_dates=['Hired'],
-        header=0, 
-        names=['Employee', 'Hired','Salary', 'Sick Days', 'ID#'])
+df = pandas.read_csv('output.csv',
+    index_col='Employee',
+    parse_dates=['Hired'],
+    header=0, 
+    names=['Employee', 'Hired','Salary', 'Sick Days', 'ID#'])
 
-    print(df)
+print(df)
 
-    commit = input('Would you like to commit the changes? (Y/N)')
+commit = input('Would you like to commit the changes? (Y/N)')
 
-    if commit == 'Y' or commit == 'y':
-        df.to_csv('hrdata_modified.csv')
-        print('Changes commited.')
-    else:
-        print('Changes not commited.')
+if commit == 'Y' or commit == 'y':
+    df.to_csv('hrdata_modified.csv')
+    print('Changes commited.')
 else:
-    print('Employee not found!')        
+    print('Changes not commited.')     
