@@ -19,5 +19,5 @@ lines = list(r)
 
 lines[val][4] = '88-888-8888'
 
-writer = csv.writer(open('output.csv', 'w'))
+writer = csv.writer(open('output.csv', 'w', newline=''))
 writer.writerows(lines)
