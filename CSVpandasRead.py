@@ -1,4 +1,5 @@
 import pandas
+
 df = pandas.read_csv('hrdata.csv', 
             index_col='Employee', 
             parse_dates=['Hired'], 
