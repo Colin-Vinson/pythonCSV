@@ -13,14 +13,16 @@ def find_index(input):
         return index 
       else : index+=1 
 val = find_index(user_input)
-print (val)
+#print (val)
+print ('Employee record found.')
+newID = input('Enter new ID# (xx-xxx-xxx): ')
 
 reader = csv.reader(open('hrdata_modified.csv')) 
 lines = list(reader)
 
-  
+    
 
-lines[val][4] = '99-999-9999'
+lines[val][4] = newID
 
 w = open('output.csv', 'w', newline='')
 writer = csv.writer(w)
