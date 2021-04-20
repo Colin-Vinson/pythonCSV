@@ -5,8 +5,6 @@ user_input = input('Enter employee name: ')
 
 #Function to find row number of employee
 def find_index(input): 
-    o = open('hrdata_modified.csv', 'r') 
-    myData = csv.reader(o) 
     record = open('hrdata_modified.csv', 'r') 
     myData = csv.reader(record) 
     index = 0 
