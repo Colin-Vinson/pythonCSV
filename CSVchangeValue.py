@@ -3,9 +3,12 @@ import pandas
 
 user_input = input('Enter employee name: ')
 
+#Function to find row number of employee
 def find_index(input): 
     o = open('hrdata_modified.csv', 'r') 
     myData = csv.reader(o) 
+    record = open('hrdata_modified.csv', 'r') 
+    myData = csv.reader(record) 
     index = 0 
     for row in myData:
       #print (row)
@@ -13,7 +16,7 @@ def find_index(input):
         return index 
       else : index+=1 
 val = find_index(user_input)
-#print (val)
+print (val)
 print ('Employee record found.')
 newID = input('Enter new ID# (xx-xxx-xxx): ')
 
