@@ -2,7 +2,7 @@ import pandas
 
 df = pandas.read_csv('hrdata_modified.csv')
 
-newEmployee = ['Ryan Curtis','2012-01-14',81000.00,15]
+newEmployee = ['Colin Vinson','2011-01-17',82000.00,25,'11-111-1111']
 
 df.loc[len(df.index)+1] = newEmployee
 
