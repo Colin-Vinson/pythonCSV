@@ -1,7 +1,7 @@
 import csv
 
-with open('hrdata_modified.csv') as db:
-    reader = csv.reader(db)
+with open('hrdata_modified.csv') as dataFrame:
+    reader = csv.reader(dataFrame)
     
     found = 0
     success = 0
