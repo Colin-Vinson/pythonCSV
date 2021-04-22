@@ -14,10 +14,10 @@ def find_index(input):
         return index 
       else : index+=1 
 val = find_index(user_input)
-#print (val)
-# if val is None:
-#   print('Employee record not found!')
-# else:
+print (val)
+if val is None:
+  print('Employee record not found!')
+else:
   print ('Employee record found.')
   newID = input('Enter new ID# (xx-xxx-xxx): ')
 
