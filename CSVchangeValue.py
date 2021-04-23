@@ -19,7 +19,7 @@ if val is None:
   print('Employee record not found!')
 else:
   print ('Employee record found.')
-  newID = input('Enter new ID# (xx-xxx-xxx): ')
+  newID = input('Enter new ID# (xx-xxx-xxxx): ')
 
   reader = csv.reader(open('hrdata_modified.csv')) 
   lines = list(reader)
