@@ -6,7 +6,7 @@ with open('hrdata_modified.csv') as dataFrame:
     found = 0
     success = 0
 
-    employee = input('Enter employee name: ')
+    employee = input('Employee name: ')
     employeeID = input('Enter ID# (xx-xxx-xxxx): ')
     
     for row in reader:
